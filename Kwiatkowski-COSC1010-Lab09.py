@@ -18,8 +18,7 @@
 # which returns the corresponding attribute, just the value.
 # For the size and toppings attributes, you will need to have a method to set them.
 # - For Size, ensure it is an int > 10 (inches)
-# - If it is not, default to a 10" pizza (you can store ten). These checks should
-occur in init as well.
+# - If it is not, default to a 10" pizza (you can store ten). These checks should occur in init as well.
 # - For toppings, you will need to add the toppings.
 # - This method needs to be able to handle multiple values.
 # - Append all elements to the list.
@@ -95,3 +94,12 @@ You had 3 topping(s) for $0.8999999999999999
 Your total price is $12.9
 Would you like to place an order? exit to exit
 """
+
+class Pizza:
+    def __init__(size, sauce = red):
+        self.size = size
+        self.sauce = sauce
+
+class Pizzeria:
+    def __init__(orders, price_per_topping, price_per_inch, )
+
