@@ -169,20 +169,21 @@ class Pizzeria:
         print(f"You ordered a {pizza.getSize()} inch pizza with {pizza.sauce} sauce and these toppings:")
         for topping in pizza.getToppings():
             print(topping)
-        print(f"You ordered a {pizza.getSize()} inch pizza for ${priceSize:.2f}")
+        print(f"\nYou ordered a {pizza.getSize()} inch pizza for ${priceSize:.2f}")
         print(f"You had {pizza.getNumberOfToppings()} toppings(s) for ${priceToppings:.2f}")
-        print(f"Total price is ${totalprice:.2f}\n")
+        print(f"Total price is ${totalprice:.2f}")
+        print(f"total number of orders placed is: {pizzeria.getNumberOfOrders()}\n")
 
     def getNumberOfOrders(self):
         return self.orders
 
 pizzeria = Pizzeria()
 
+# code starts here 
 while True:
+    # Allows the user to input multiple different pizza orders without having to restart the code
     order = input("Would you like to place an order? Type anything else to exit: ").strip().lower()
     if order == 'yes':
         pizzeria.placeOrder()
     else:
         break
-
-print(f"total number of orders placed is: {pizzeria.getNumberOfOrders}")
