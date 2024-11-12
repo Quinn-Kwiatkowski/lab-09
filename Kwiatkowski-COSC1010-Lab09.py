@@ -169,7 +169,8 @@ class Pizzeria:
         print(f"You ordered a {pizza.getSize()} inch pizza with {pizza.sauce} sauce and these toppings:")
         for topping in pizza.getToppings():
             print(topping)
-        print(f"You had {pizza.getNumberOfToppings} toppings(s) for ${priceToppings:.2f}")
+        print(f"You ordered a {pizza.getSize()} inch pizza for ${priceSize:.2f}")
+        print(f"You had {pizza.getNumberOfToppings()} toppings(s) for ${priceToppings:.2f}")
         print(f"Total price is ${totalprice:.2f}\n")
 
     def getNumberOfOrders(self):
@@ -178,9 +179,9 @@ class Pizzeria:
 pizzeria = Pizzeria()
 
 while True:
-    order = input("Would you like to place an order? 'exit' to exit: ").strip().lower()
+    order = input("Would you like to place an order? Type anything else to exit: ").strip().lower()
     if order == 'yes':
-        pizzeria.placeOrders()
+        pizzeria.placeOrder()
     else:
         break
 
